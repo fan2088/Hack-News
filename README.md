@@ -1,3 +1,4 @@
+# Hack News
 ## Inspiration
 Our team was inspired by the increasing tension between the United States and Yemen and felt the urge to collect and spread unbiased and transparent reality about Yemen in America. Nevertheless, finding political neutral news reports becomes increasingly difficult among mainstream media because of the current polarized political background.
 
