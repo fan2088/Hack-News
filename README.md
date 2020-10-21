@@ -1,68 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inspiration
+Our team was inspired by the increasing tension between the United States and Yemen and felt the urge to collect and spread unbiased and transparent reality about Yemen in America. Nevertheless, finding political neutral news reports becomes increasingly difficult among mainstream media because of the current polarized political background.
 
-## Available Scripts
+## What it does
+In hope of providing the most transparent and unbiased news to the public, our team developed “HackNews”, a web application, allowing the users to vote the articles as “legitimate” or “fabricated”, as well as to share comments to exercise their freedom of speech. HackNews ranks the credibility of the news according to the voting result from users.
 
-In the project directory, you can run:
+## How I built it
+The design consists of several components including web scraping, storing upvoting, downvoting, and comments to Google Cloud, and computing the rankings of news articles in real-time. To begin with, we utilized web scraping to extract one hundred most up-to-date Yemen news articles from multiple news sites such as Yahoo, NBC, CNN, and Fox News. The ability to upvote or downvote, as well as the functionality to comment on news, is one of the most unique and crucial characteristics of HackNews. More specifically, readers are able to upvote for news that they consider as credible and unbiased while downvoting non-credible news articles. The comment section lays right next to the news entity in order to accomplish the concept of a user-friendly design.
+Generally speaking, the algorithm utilizes an upvote and downvote result from user voting to predict the credibility of each article. The credibility rank interprets the voting results with equal weight, and compute the credibility index of each news. The news is ranked corresponding to this credibility index in descending order. To present the credibility more user-friendly and visually-appealing, we implemented a gradient bar with dynamic color-changing that shows the degree of credibility. In detail, the bar represents the most trustworthy news as bright green, the most unreliable articles as bright red, and degrees of red and green shadows as different levels of credibility. In the back-end, data on votes and comments are uploaded and stored to google cloud due to the developer-friendly and faster response time of Google Cloud Platform.
 
-### `yarn start`
+## Challenges I ran into
+Our experience with web hosting faced several obstacles. We learned the limitations for different web hosting platforms after researching and experiencing with InfinityFree and Heroku: InfinityFree minimizes the support on React, which is the major frontend framework for our application, while Heroku denies uploading from git. In the end, GitHub ends up the most user-friendly and light-weight platform for deploying websites.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Accomplishments that I'm proud of
+We are proud of making our internal search engine work. We used a semantic React component to help us synchronize several async requests as well as filter search results by credibility and relevance. We are also proud of writing our own web scraper using python and decoding the results using DOM manipulation.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## What I learned
+One of the most practical skills our team learned this time is the ability to replace the traditional databases with serverless Google Cloud Platform data storage. More specifically, firebase is used to store our vote counts, comments, and news articles. As reading through more news about Yemen, we develop a multi-dimensional understanding of Yemen events progressively. Unlike most news presented to the public on mainstream media, the reality is usually different from the news. In order to explore the facts, analyzing with an argumentative perspective is indispensable. Unfortunately, news related to Yemen is not gaining enough attention due to the domestic media manipulation in the U.S. With the purpose of spreading Yemen news to a bigger population, technologies such as HackNews become the essential methods to spread information. Therefore, modern technologies provide the most efficient solutions for many social problems.
 
-### `yarn test`
+## What's next for HackNews
+We want to give readers the power to judge the credibility of articles, therefore creating a democratic environment in the news feed community. In the future, we strive to improve the algorithm of the ranking system so that the website can organize the best news faster. We also want to add in features where the user can upload videos and images and send emojis in the comment section.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
